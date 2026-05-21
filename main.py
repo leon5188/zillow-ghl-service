@@ -6,6 +6,7 @@ from pydantic import BaseModel
 import logging
 import random
 import time
+from typing import Optional, Dict, Any
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -26,8 +27,6 @@ CUSTOM_FIELD_MAP = {
     "sqft": os.getenv("FIELD_ID_SQFT", "sqft_placeholder"),
     "year_built": os.getenv("FIELD_ID_YEAR_BUILT", "year_built_placeholder")
 }
-
-from typing import Optional, Dict, Any
 
 class EnrichmentRequest(BaseModel):
     id: Optional[str] = None
