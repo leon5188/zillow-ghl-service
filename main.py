@@ -18,6 +18,9 @@ app = FastAPI()
 GHL_API_KEY = os.getenv("GHL_API_KEY", "pit-9b9f29c2-152d-454c-bdf7-e9ed6571f040")
 GHL_API_VERSION = "2021-07-28"
 
+# ScraperAPI Configuration (Get a free key at scraperapi.com)
+SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY", "")
+
 # Mapping of GHL Custom Field Names to IDs (User should update these after creating fields in GHL)
 # Example: {"zestimate": "field_id_123"}
 CUSTOM_FIELD_MAP = {
